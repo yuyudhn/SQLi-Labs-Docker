@@ -1,5 +1,6 @@
 # Use Alpine Linux as base image
 FROM alpine:3.12.11
+LABEL maintainer=yuyudhn@gmail.com
 
 # Set environment variables
 ENV APACHE_RUN_USER=apache \
@@ -40,6 +41,10 @@ RUN mkdir -p /var/lib/mysql /run/mysqld /var/log/mysql /var/run/mysqld && \
 # Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/apache2/access.log \
+	&& ln -sf /dev/stderr /var/log/apache2/error.log
 
 # Expose port 80
 EXPOSE 80
