@@ -9,6 +9,11 @@ git clone https://github.com/yuyudhn/SQLi-Labs-Docker
 cd SQLi-Labs-Docker
 docker-compose up --build -d
 ```
+or
+
+```bash
+docker run --rm -it -p 1337:80 linuxsec/sqli-labs:v1
+```
 ## Screenshot
 
 - Union Based SQL Injection at Index
