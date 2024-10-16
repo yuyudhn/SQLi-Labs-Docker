@@ -15,6 +15,7 @@ Welcome to the SQL Injection Labs, where you can explore and learn about the vul
 </p>
 <h2>Sitemap</h2>
 <ul>
+<li><a href="/info.php">PHPInfo</a></li>
 <li><a href="/data.php">Driver data</a></li>
 <li><a href="/dashboard/auth.php">Login page</a></li>
 </ul>

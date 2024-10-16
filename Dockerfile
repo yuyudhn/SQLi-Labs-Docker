@@ -24,8 +24,7 @@ RUN mkdir -p /run/apache2 && \
 # Deploy SQLi Labs
 COPY /src /var/www/html
 RUN rm -f /var/www/html/index.html
-RUN mkdir -p /var/www/html/uploads && \
-    chmod 777 /var/www/html/uploads
+RUN chmod 777 /var/www/html/img
 RUN chown -R apache: /var/www/html
 
 # Configure MySQL and initialize database
