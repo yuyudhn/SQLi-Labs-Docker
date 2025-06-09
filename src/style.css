@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --primary-text-color: #212529;
+    --secondary-text-color: #6c757d;
+    --accent-color: #495057;
+    --border-color: #e9ecef;
+    --button-color: #495057;
+    --button-hover-color: #343a40;
+    --logout-button-color: #dc3545;
+    --logout-button-hover-color: #c82333;
+    --error-text-color: #dc3545;
+    --error-background-color: #f8d7da;
+    --error-border-color: #f5c6cb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 0;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    font-size: 2.8em;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin: 40px 0 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--secondary-text-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-text-color);
+}
+
+.pilot-card,
+.profile-container,
+.dashboard-container,
+.section-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.pilot-card:hover,
+.dashboard-container:hover,
+.section-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #dee2e6;
+}
+
+.pilot-card a {
+    display: block;
+    padding: 25px;
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.profile-container,
+.dashboard-container,
+.section-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 35px;
+}
+
+
+.pilot-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.pilot-card .pilot-name {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pilot-card .pilot-unit {
+    font-size: 1em;
+    color: var(--secondary-text-color);
+    margin-top: 8px;
+}
+
+.sql-query {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 15px;
+    background-color: #f1f3f5;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: monospace;
+    color: var(--primary-text-color);
+    overflow-x: auto;
+    font-size: 0.85em;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-table th {
+    color: var(--accent-color);
+    font-weight: 600;
+    width: 25%;
+}
+
+.profile-table tr:last-child th,
+.profile-table tr:last-child td {
+    border-bottom: none;
+}
+
+.profile-image {
+    max-width: 120px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    font-size: 1em;
+    color: var(--primary-text-color);
+    background-color: #fdfdfd;
+    transition: border-color 0.2s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(73, 80, 87, 0.1);
+}
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1.05em;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover-color);
+}
+
+.error-message {
+    color: var(--error-text-color);
+    background-color: var(--error-background-color);
+    border: 1px solid var(--error-border-color);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.welcome-message {
+    font-size: 1.1em;
+    color: var(--secondary-text-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.logout-form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-button {
+    background-color: var(--logout-button-color);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--logout-button-hover-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 0;
+    }
+    .page-wrapper {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-table th,
+    .profile-table td {
+        padding: 15px 0;
+    }
+
+    .dashboard-container,
+    .section-container {
+        padding: 25px;
+        margin: 20px auto;
+    }
+}

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    container_name: sqli-docker-labs
+    hostname: sqli-docker-labs
+    build: .
+    ports:
+      - '127.0.0.1:1337:80'
+    volumes:
+      - ./logs:/var/log/apache2
+      - mysql-data:/var/lib/mysql
+    stdin_open: true
+volumes:
+  mysql-data:
